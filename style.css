@@ -1,31 +1,31 @@
-/* Šî–{ƒŠƒZƒbƒg */
+/* åŸºæœ¬ãƒªã‚»ãƒƒãƒˆ */
 
 {
 box-sizing: border-box;
 margin: 0;
 padding: 0;
 }
-/* ƒy[ƒW‘S‘Ì‚ÌƒXƒ^ƒCƒ‹ */
+/* ãƒšãƒ¼ã‚¸å…¨ä½“ã®ã‚¹ã‚¿ã‚¤ãƒ« */
 body {
 font-family: sans-serif;
 margin: 20px;
 background-color: #f7f7f7;
 }
 
-/* Œ©o‚µ */
+/* è¦‹å‡ºã— */
 h1 {
 margin-bottom: 20px;
 text-align: center;
 }
 
-/* ƒ^ƒuƒ{ƒ^ƒ“ŒQ */
+/* ã‚¿ãƒ–ãƒœã‚¿ãƒ³ç¾¤ */
 .tab-buttons {
 display: flex;
 justify-content: center;
 margin-bottom: 20px;
 }
 
-/* Šeƒ^ƒuƒ{ƒ^ƒ“ */
+/* å„ã‚¿ãƒ–ãƒœã‚¿ãƒ³ */
 .tab-button {
 background-color: #ddd;
 border: none;
@@ -43,7 +43,7 @@ background-color: #666;
 color: #fff;
 }
 
-/* ƒ^ƒuƒRƒ“ƒeƒ“ƒcŒQ */
+/* ã‚¿ãƒ–ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ç¾¤ */
 .tab-contents {
 background-color: #fff;
 padding: 20px;
@@ -51,11 +51,11 @@ border: 1px solid #ddd;
 min-height: 150px;
 }
 
-/* ƒ^ƒuƒRƒ“ƒeƒ“ƒci”ñ•\¦•”•ªj /
+/* ã‚¿ãƒ–ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ï¼ˆéè¡¨ç¤ºéƒ¨åˆ†ï¼‰ /
 .tab-content {
 display: none;
 }
-/ ƒ^ƒuƒRƒ“ƒeƒ“ƒci•\¦•”•ªj */
+/ ã‚¿ãƒ–ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ï¼ˆè¡¨ç¤ºéƒ¨åˆ†ï¼‰ */
 .tab-content.active {
 display: block;
 }
