@@ -1,32 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
-// ‘Sƒ^ƒuƒ{ƒ^ƒ“—v‘f‚ğæ“¾
+// å…¨ã‚¿ãƒ–ãƒœã‚¿ãƒ³è¦ç´ ã‚’å–å¾—
 const tabButtons = document.querySelectorAll(".tab-button");
-// ‘Sƒ^ƒuƒRƒ“ƒeƒ“ƒc—v‘f‚ğæ“¾
+// å…¨ã‚¿ãƒ–ã‚³ãƒ³ãƒ†ãƒ³ãƒ„è¦ç´ ã‚’å–å¾—
 const tabContents = document.querySelectorAll(".tab-content");
 
-// ƒ^ƒuØ‚è‘Ö‚¦ŠÖ”
+// ã‚¿ãƒ–åˆ‡ã‚Šæ›¿ãˆé–¢æ•°
 function showTab(targetId) {
-// ‘Sƒ^ƒuƒRƒ“ƒeƒ“ƒc‚ğˆê“x”ñ•\¦‚É
+// å…¨ã‚¿ãƒ–ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã‚’ä¸€åº¦éè¡¨ç¤ºã«
 tabContents.forEach(content => {
 content.classList.remove("active");
 });
-// ‘Sƒ^ƒuƒ{ƒ^ƒ“‚ÌƒAƒNƒeƒBƒuó‘Ô‚ğ‰ğœ
+// å…¨ã‚¿ãƒ–ãƒœã‚¿ãƒ³ã®ã‚¢ã‚¯ãƒ†ã‚£ãƒ–çŠ¶æ…‹ã‚’è§£é™¤
 tabButtons.forEach(button => {
 button.classList.remove("active");
 });
-// ‘ÎÛ‚Ìƒ^ƒuƒRƒ“ƒeƒ“ƒc‚Ì‚İ•\¦
+// å¯¾è±¡ã®ã‚¿ãƒ–ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã®ã¿è¡¨ç¤º
 const targetContent = document.getElementById(targetId);
 if (targetContent) {
 targetContent.classList.add("active");
 }
-// ‘Î‰‚·‚éƒ^ƒuƒ{ƒ^ƒ“‚ğƒAƒNƒeƒBƒu‚É
+// å¯¾å¿œã™ã‚‹ã‚¿ãƒ–ãƒœã‚¿ãƒ³ã‚’ã‚¢ã‚¯ãƒ†ã‚£ãƒ–ã«
 document.querySelector(button[data-target="${targetId}"]).classList.add("active");
 }
 
-// ƒ{ƒ^ƒ“ƒNƒŠƒbƒN‚ÌƒCƒxƒ“ƒgİ’è
+// ãƒœã‚¿ãƒ³ã‚¯ãƒªãƒƒã‚¯æ™‚ã®ã‚¤ãƒ™ãƒ³ãƒˆè¨­å®š
 tabButtons.forEach(button => {
 button.addEventListener("click", () => {
-// data-target‘®«‚©‚ç•\¦‚µ‚½‚¢ƒ^ƒu‚ÌID‚ğæ“¾
+// data-targetå±æ€§ã‹ã‚‰è¡¨ç¤ºã—ãŸã„ã‚¿ãƒ–ã®IDã‚’å–å¾—
 const targetId = button.getAttribute("data-target");
 showTab(targetId);
 });
