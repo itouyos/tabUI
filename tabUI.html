@@ -1,105 +1,39 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8" />
-<title>Tab UI Example</title>
-<!-- 外部CSSファイルをリンクする場合 -->
-<link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <title>Tab UI Example</title>
+  <!-- 外部CSSファイルをリンクする場合 -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<h1>サンプル・タブUI</h1>
+  <h1>サンプル・タブUI</h1>
 
-<!-- タブボタン群 -->
-<div class="tab-buttons">
-<button class="tab-button active" data-target="tab1">タブ1</button>
-<button class="tab-button" data-target="tab2">タブ2</button>
-<button class="tab-button" data-target="tab3">タブ3</button>
-</div>
+  <!-- タブボタン群 -->
+  <div class="tab-buttons">
+    <button class="tab-button active" data-target="tab1">タブ1</button>
+    <button class="tab-button" data-target="tab2">タブ2</button>
+    <button class="tab-button" data-target="tab3">タブ3</button>
+  </div>
 
-<!-- タブコンテンツ群 -->
-<div class="tab-contents">
-<div id="tab1" class="tab-content active">
-<h2>タブ1のコンテンツ</h2>
-<p>ここにタブ1の詳細情報などを表示します。</p>
-</div>
-<div id="tab2" class="tab-content">
-<h2>タブ2のコンテンツ</h2>
-<p>ここにタブ2の詳細情報などを表示します。</p>
-</div>
-<div id="tab3" class="tab-content">
-<h2>タブ3のコンテンツ</h2>
-<p>ここにタブ3の詳細情報などを表示します。</p>
-</div>
-</div>
+  <!-- タブコンテンツ群 -->
+  <div class="tab-contents">
+    <div id="tab1" class="tab-content active">
+      <h2>タブ1のコンテンツ</h2>
+      <p>ここにタブ1の詳細情報などを表示します。</p>
+    </div>
+    <div id="tab2" class="tab-content">
+      <h2>タブ2のコンテンツ</h2>
+      <p>ここにタブ2の詳細情報などを表示します。</p>
+    </div>
+    <div id="tab3" class="tab-content">
+      <h2>タブ3のコンテンツ</h2>
+      <p>ここにタブ3の詳細情報などを表示します。</p>
+    </div>
+  </div>
 
-<!-- 外部JSファイルを読み込む場合 -->
-<script src="script.js"></script>
+  <!-- 外部JSファイルを読み込む -->
+  <script src="script.js"></script>
 </body>
-</html>document.addEventListener("DOMContentLoaded", function () {
-// 全タブボタン要素を取得
-const tabButtons = document.querySelectorAll(".tab-button");
-// 全タブコンテンツ要素を取得
-const tabContents = document.querySelectorAll(".tab-content");
-
-// タブ切り替え関数
-function showTab(targetId) {
-// 全タブコンテンツを一度非表示に
-tabContents.forEach(content => {
-content.classList.remove("active");
-});
-// 全タブボタンのアクティブ状態を解除
-tabButtons.forEach(button => {
-button.classList.remove("active");
-});
-// 対象のタブコンテンツのみ表示
-const targetContent = document.getElementById(targetId);
-if (targetContent) {
-targetContent.classList.add("active");
-}
-// 対応するタブボタンをアクティブに
-document.querySelector(button[data-target="${targetId}"]).classList.add("active");
-}
-
-// ボタンクリック時のイベント設定
-tabButtons.forEach(button => {
-button.addEventListener("click", () => {
-// data-target属性から表示したいタブのIDを取得
-const targetId = button.getAttribute("data-target");
-showTab(targetId);
-});
-});
-});document.addEventListener("DOMContentLoaded", function () {
-// 全タブボタン要素を取得
-const tabButtons = document.querySelectorAll(".tab-button");
-// 全タブコンテンツ要素を取得
-const tabContents = document.querySelectorAll(".tab-content");
-
-// タブ切り替え関数
-function showTab(targetId) {
-// 全タブコンテンツを一度非表示に
-tabContents.forEach(content => {
-content.classList.remove("active");
-});
-// 全タブボタンのアクティブ状態を解除
-tabButtons.forEach(button => {
-button.classList.remove("active");
-});
-// 対象のタブコンテンツのみ表示
-const targetContent = document.getElementById(targetId);
-if (targetContent) {
-targetContent.classList.add("active");
-}
-// 対応するタブボタンをアクティブに
-document.querySelector(button[data-target="${targetId}"]).classList.add("active");
-}
-
-// ボタンクリック時のイベント設定
-tabButtons.forEach(button => {
-button.addEventListener("click", () => {
-// data-target属性から表示したいタブのIDを取得
-const targetId = button.getAttribute("data-target");
-showTab(targetId);
-});
-});
-});
+</html>
