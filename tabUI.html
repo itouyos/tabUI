@@ -3,101 +3,101 @@
 <head>
 <meta charset="UTF-8" />
 <title>Tab UI Example</title>
-<!-- �O��CSS�t�@�C���������N����ꍇ -->
+<!-- 外部CSSファイルをリンクする場合 -->
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<h1>�T���v���E�^�uUI</h1>
+<h1>サンプル・タブUI</h1>
 
-<!-- �^�u�{�^���Q -->
+<!-- タブボタン群 -->
 <div class="tab-buttons">
-<button class="tab-button active" data-target="tab1">�^�u1</button>
-<button class="tab-button" data-target="tab2">�^�u2</button>
-<button class="tab-button" data-target="tab3">�^�u3</button>
+<button class="tab-button active" data-target="tab1">タブ1</button>
+<button class="tab-button" data-target="tab2">タブ2</button>
+<button class="tab-button" data-target="tab3">タブ3</button>
 </div>
 
-<!-- �^�u�R���e���c�Q -->
+<!-- タブコンテンツ群 -->
 <div class="tab-contents">
 <div id="tab1" class="tab-content active">
-<h2>�^�u1�̃R���e���c</h2>
-<p>�����Ƀ^�u1�̏ڍ׏��Ȃǂ�\�����܂��B</p>
+<h2>タブ1のコンテンツ</h2>
+<p>ここにタブ1の詳細情報などを表示します。</p>
 </div>
 <div id="tab2" class="tab-content">
-<h2>�^�u2�̃R���e���c</h2>
-<p>�����Ƀ^�u2�̏ڍ׏��Ȃǂ�\�����܂��B</p>
+<h2>タブ2のコンテンツ</h2>
+<p>ここにタブ2の詳細情報などを表示します。</p>
 </div>
 <div id="tab3" class="tab-content">
-<h2>�^�u3�̃R���e���c</h2>
-<p>�����Ƀ^�u3�̏ڍ׏��Ȃǂ�\�����܂��B</p>
+<h2>タブ3のコンテンツ</h2>
+<p>ここにタブ3の詳細情報などを表示します。</p>
 </div>
 </div>
 
-<!-- �O��JS�t�@�C����ǂݍ��ޏꍇ -->
+<!-- 外部JSファイルを読み込む場合 -->
 <script src="script.js"></script>
 </body>
 </html>document.addEventListener("DOMContentLoaded", function () {
-// �S�^�u�{�^���v�f���擾
+// 全タブボタン要素を取得
 const tabButtons = document.querySelectorAll(".tab-button");
-// �S�^�u�R���e���c�v�f���擾
+// 全タブコンテンツ要素を取得
 const tabContents = document.querySelectorAll(".tab-content");
 
-// �^�u�؂�ւ��֐�
+// タブ切り替え関数
 function showTab(targetId) {
-// �S�^�u�R���e���c����x��\����
+// 全タブコンテンツを一度非表示に
 tabContents.forEach(content => {
 content.classList.remove("active");
 });
-// �S�^�u�{�^���̃A�N�e�B�u��Ԃ�����
+// 全タブボタンのアクティブ状態を解除
 tabButtons.forEach(button => {
 button.classList.remove("active");
 });
-// �Ώۂ̃^�u�R���e���c�̂ݕ\��
+// 対象のタブコンテンツのみ表示
 const targetContent = document.getElementById(targetId);
 if (targetContent) {
 targetContent.classList.add("active");
 }
-// �Ή�����^�u�{�^�����A�N�e�B�u��
+// 対応するタブボタンをアクティブに
 document.querySelector(button[data-target="${targetId}"]).classList.add("active");
 }
 
-// �{�^���N���b�N���̃C�x���g�ݒ�
+// ボタンクリック時のイベント設定
 tabButtons.forEach(button => {
 button.addEventListener("click", () => {
-// data-target��������\���������^�u��ID���擾
+// data-target属性から表示したいタブのIDを取得
 const targetId = button.getAttribute("data-target");
 showTab(targetId);
 });
 });
 });document.addEventListener("DOMContentLoaded", function () {
-// �S�^�u�{�^���v�f���擾
+// 全タブボタン要素を取得
 const tabButtons = document.querySelectorAll(".tab-button");
-// �S�^�u�R���e���c�v�f���擾
+// 全タブコンテンツ要素を取得
 const tabContents = document.querySelectorAll(".tab-content");
 
-// �^�u�؂�ւ��֐�
+// タブ切り替え関数
 function showTab(targetId) {
-// �S�^�u�R���e���c����x��\����
+// 全タブコンテンツを一度非表示に
 tabContents.forEach(content => {
 content.classList.remove("active");
 });
-// �S�^�u�{�^���̃A�N�e�B�u��Ԃ�����
+// 全タブボタンのアクティブ状態を解除
 tabButtons.forEach(button => {
 button.classList.remove("active");
 });
-// �Ώۂ̃^�u�R���e���c�̂ݕ\��
+// 対象のタブコンテンツのみ表示
 const targetContent = document.getElementById(targetId);
 if (targetContent) {
 targetContent.classList.add("active");
 }
-// �Ή�����^�u�{�^�����A�N�e�B�u��
+// 対応するタブボタンをアクティブに
 document.querySelector(button[data-target="${targetId}"]).classList.add("active");
 }
 
-// �{�^���N���b�N���̃C�x���g�ݒ�
+// ボタンクリック時のイベント設定
 tabButtons.forEach(button => {
 button.addEventListener("click", () => {
-// data-target��������\���������^�u��ID���擾
+// data-target属性から表示したいタブのIDを取得
 const targetId = button.getAttribute("data-target");
 showTab(targetId);
 });
